@@ -199,7 +199,7 @@ namespace MineducRbdViewer {
                 Utils.DoOnBackground(() => {
                     TaskbarItemInfo.ProgressState = TaskbarItemProgressState.Normal;
                     TaskbarItemInfo.ProgressValue = progress;
-                    lblNotification.Content = string.Format("Obteniendo fichas: {0} de {1}", i + 1, listRdb.Count);
+                    lblNotification.Content = string.Format("Fichas obtenidas: {0} de {1} ({2:0.00}%)", i, listRdb.Count, progress * 100);
                 });
 
                 var rbd = listRdb[i];

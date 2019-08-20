@@ -65,7 +65,7 @@ namespace MineducRbd {
                                 break;
                             case "Sostenedor:":
                                 school.Sostenedor = CheckCellValue(nextText);
-                                break;
+                                return school;
                             default:
                                 break;
                         }
