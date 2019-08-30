@@ -1,4 +1,4 @@
-# GetDataByRbd
+# VisualizadorFichasMineduc
 Visualizador de fichas de establecimientos del Mineduc
 
 # Modo de uso

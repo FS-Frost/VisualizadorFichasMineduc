@@ -21,22 +21,23 @@ namespace MineducRbdViewer {
 
         public MainWindow() {
             InitializeComponent();
+
+            // Components.
             Utils.SetWindowMinSize(this);
             TaskbarItemInfo = new TaskbarItemInfo();
-            
-            // Components.
+            HiddeCancelButton();
+            DisableSaveButton();
+
             dgData.ItemsSource = ListSchools;
             dgData.HeadersVisibility = DataGridHeadersVisibility.Column;
             dgData.AutoGenerateColumns = true;
-            dgData.AutoGeneratingColumn += DgData_AutoGeneratingColumn;
-            HiddeCancelButton();
-            DisableSaveButton();
 
             // Events.
             btnLoadRbd.Click += BtnLoadRbd_Click;
             btnCancelLoadRbd.Click += BtnCancelLoadRbd_Click;
             btnSave.Click += BtnSave_Click;
             Closing += MainWindow_Closing;
+            dgData.AutoGeneratingColumn += DgData_AutoGeneratingColumn;
         }
 
         private void MainWindow_Closing(object sender, CancelEventArgs e) {
